@@ -1,0 +1,354 @@
+@use '../variables' as v;
+
+.sidebar {
+  width: v.$sidebar-width;
+  height: 100%;
+  background: v.$glass-bg;
+  border-right: 1px solid v.$glass-border;
+  display: flex;
+  flex-direction: column;
+  flex-shrink: 0;
+  backdrop-filter: blur(16px);
+  z-index: 100;
+  transition: transform v.$transition, left v.$transition;
+
+  @media (max-width: 900px) {
+    position: fixed;
+    top: 0;
+    left: -#{v.$sidebar-width};
+    transform: translateX(0);
+    box-shadow: v.$glass-shadow;
+    
+    &.open {
+      left: 0;
+    }
+  }
+}
+
+.mobileHeader {
+  display: none;
+  padding: 16px;
+  justify-content: flex-end;
+  border-bottom: 1px solid v.$glass-border;
+
+  @media (max-width: 900px) {
+    display: flex;
+  }
+}
+
+.closeBtn {
+  background: transparent;
+  border: none;
+  color: v.$slate-400;
+  cursor: pointer;
+  padding: 6px;
+  border-radius: v.$radius-sm;
+  transition: background v.$transition-fast, color v.$transition-fast;
+
+  &:hover {
+    background: rgba(255, 255, 255, 0.05);
+    color: v.$white;
+  }
+}
+
+.scrollableContent {
+  flex: 1;
+  overflow-y: auto;
+  padding: 32px 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+}
+
+// Hero Profile Info
+.profileHero {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.avatarWrapper {
+  position: relative;
+  margin-bottom: 16px;
+}
+
+.avatarGlow {
+  position: absolute;
+  top: -4px;
+  left: -4px;
+  right: -4px;
+  bottom: -4px;
+  border-radius: v.$radius-full;
+  background: v.$avatar-gradient;
+  filter: blur(8px);
+  opacity: 0.6;
+  animation: pulse-glow 3s infinite alternate;
+}
+
+@keyframes pulse-glow {
+  0% { opacity: 0.4; filter: blur(6px); }
+  100% { opacity: 0.8; filter: blur(10px); }
+}
+
+.avatar {
+  position: relative;
+  width: 80px;
+  height: 80px;
+  border-radius: v.$radius-full;
+  background: v.$avatar-gradient;
+  color: v.$white;
+  font-size: v.$font-2xl;
+  font-weight: 800;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 3px solid v.$black;
+  box-shadow: v.$glass-shadow;
+}
+
+.statusDot {
+  position: absolute;
+  bottom: 4px;
+  right: 4px;
+  width: 14px;
+  height: 14px;
+  border-radius: v.$radius-full;
+  background: v.$accent-emerald;
+  border: 2px solid v.$slate-950;
+  box-shadow: 0 0 10px v.$accent-emerald;
+}
+
+.name {
+  font-size: v.$font-xl;
+  font-weight: 700;
+  color: v.$white;
+  margin: 0 0 4px;
+  background: v.$glow-purple-blue;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.title {
+  font-size: v.$font-sm;
+  color: v.$slate-300;
+  margin: 0 0 10px;
+  font-weight: 500;
+}
+
+.location {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: v.$font-xs;
+  color: v.$slate-400;
+}
+
+// Contacts Grid
+.contactsGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+}
+
+.contactCard {
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid v.$glass-border;
+  border-radius: v.$radius-md;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 12px 6px;
+  color: v.$slate-300;
+  text-decoration: none;
+  font-size: v.$font-xs;
+  gap: 8px;
+  transition: all v.$transition;
+
+  &:hover {
+    background: v.$glass-bg-hover;
+    border-color: v.$accent-violet;
+    color: v.$white;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 15px rgba(139, 92, 246, 0.15);
+  }
+}
+
+// Tab Bar Styling
+.tabBar {
+  display: flex;
+  background: rgba(0, 0, 0, 0.2);
+  border-radius: v.$radius-md;
+  padding: 4px;
+  border: 1px solid v.$glass-border;
+}
+
+.tab {
+  flex: 1;
+  background: transparent;
+  border: none;
+  color: v.$slate-400;
+  font-size: v.$font-xs;
+  font-weight: 600;
+  padding: 8px;
+  cursor: pointer;
+  border-radius: v.$radius-sm;
+  transition: all v.$transition-fast;
+
+  &:hover {
+    color: v.$white;
+  }
+
+  &.activeTab {
+    background: rgba(255, 255, 255, 0.08);
+    color: v.$white;
+  }
+}
+
+// Tab Contents
+.tabContent {
+  font-size: v.$font-sm;
+  color: v.$slate-300;
+  line-height: 1.6;
+}
+
+.section {
+  margin-bottom: 24px;
+
+  h3 {
+    font-size: v.$font-xs;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: v.$slate-400;
+    margin: 0 0 10px 0;
+    border-left: 2px solid v.$accent-cyan;
+    padding-left: 8px;
+  }
+
+  p {
+    margin: 0 0 12px 0;
+    
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+}
+
+// Education item
+.eduItem {
+  background: rgba(255, 255, 255, 0.01);
+  border: 1px solid rgba(255, 255, 255, 0.03);
+  border-radius: v.$radius-md;
+  padding: 12px;
+}
+
+.eduHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 4px;
+
+  h4 {
+    font-size: v.$font-xs;
+    font-weight: 600;
+    color: v.$white;
+    margin: 0;
+  }
+}
+
+.eduDate {
+  font-size: 10px;
+  color: v.$accent-cyan;
+  background: rgba(6, 182, 212, 0.1);
+  padding: 2px 6px;
+  border-radius: v.$radius-full;
+  white-space: nowrap;
+}
+
+.eduSub {
+  font-size: 11px;
+  color: v.$slate-400;
+  margin: 0 0 6px;
+}
+
+.eduMajor {
+  font-size: v.$font-xs;
+  color: v.$slate-300;
+  margin: 0;
+}
+
+// Languages
+.langGrid {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.langItem {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.langName {
+  width: 60px;
+  font-size: v.$font-xs;
+  color: v.$slate-300;
+  font-weight: 500;
+}
+
+.langBar {
+  flex: 1;
+  height: 6px;
+  background: rgba(255, 255, 255, 0.06);
+  border-radius: v.$radius-full;
+  overflow: hidden;
+}
+
+.langLevel {
+  display: block;
+  height: 100%;
+  background: v.$glow-purple-blue;
+  border-radius: v.$radius-full;
+}
+
+// Skills content
+.skillsTab {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.skillCategory {
+  h4 {
+    font-size: v.$font-xs;
+    color: v.$slate-400;
+    margin: 0 0 10px 0;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+  }
+}
+
+.tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+.tag {
+  font-size: 11px;
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid v.$glass-border;
+  color: v.$slate-300;
+  padding: 4px 10px;
+  border-radius: v.$radius-full;
+  transition: all v.$transition-fast;
+
+  &:hover {
+    background: rgba(139, 92, 246, 0.1);
+    border-color: v.$accent-violet;
+    color: v.$white;
+    transform: scale(1.05);
+  }
+}

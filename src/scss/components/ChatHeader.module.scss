@@ -1,0 +1,109 @@
+@use '../variables' as v;
+
+.header {
+  flex-shrink: 0;
+  padding: 16px 24px;
+  background: rgba(13, 17, 28, 0.4);
+  border-bottom: 1px solid v.$glass-border;
+  backdrop-filter: blur(12px);
+}
+
+.inner {
+  max-width: v.$max-width;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.toggleBtn {
+  background: transparent;
+  border: none;
+  color: v.$slate-300;
+  cursor: pointer;
+  padding: 6px;
+  border-radius: v.$radius-sm;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background v.$transition-fast, color v.$transition-fast, transform v.$transition-fast;
+
+  &:hover {
+    background: rgba(255, 255, 255, 0.05);
+    color: v.$white;
+    transform: scale(1.05);
+  }
+
+  // Toggle button is primarily for screens where sidebar is hidden
+  @media (min-width: 901px) {
+    display: none;
+  }
+}
+
+.avatar {
+  flex-shrink: 0;
+  width: 38px;
+  height: 38px;
+  border-radius: v.$radius-full;
+  background: v.$avatar-gradient;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: v.$white;
+  font-weight: 700;
+  font-size: 16px;
+  box-shadow: 0 0 10px rgba(139, 92, 246, 0.3);
+
+  // Hidden on desktop since we already show the large avatar in sidebar
+  @media (min-width: 901px) {
+    display: none;
+  }
+}
+
+.info {
+  flex: 1;
+  min-width: 0;
+}
+
+.name {
+  margin: 0;
+  font-size: v.$font-sm;
+  font-weight: 600;
+  color: v.$white;
+}
+
+.sub {
+  margin: 2px 0 0;
+  font-size: v.$font-xs;
+  color: v.$slate-400;
+}
+
+.status {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-left: auto;
+  flex-shrink: 0;
+}
+
+.dot {
+  display: inline-block;
+  width: 8px;
+  height: 8px;
+  border-radius: v.$radius-full;
+  background: v.$accent-emerald;
+  box-shadow: 0 0 8px v.$accent-emerald;
+  animation: pulse-dot 2s infinite;
+}
+
+@keyframes pulse-dot {
+  0% { transform: scale(0.9); opacity: 0.6; }
+  50% { transform: scale(1.1); opacity: 1; }
+  100% { transform: scale(0.9); opacity: 0.6; }
+}
+
+.statusText {
+  font-size: v.$font-xs;
+  color: v.$slate-400;
+  font-weight: 500;
+}

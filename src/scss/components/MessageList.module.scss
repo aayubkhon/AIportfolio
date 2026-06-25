@@ -1,0 +1,15 @@
+@use '../variables' as v;
+
+.container {
+  flex: 1;
+  overflow-y: auto;
+}
+
+.inner {
+  max-width: v.$max-width;
+  margin: 0 auto;
+  padding: 24px 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}

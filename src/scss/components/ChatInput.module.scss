@@ -1,0 +1,98 @@
+@use '../variables' as v;
+
+.footer {
+  flex-shrink: 0;
+  padding: 18px 24px 24px;
+  background: rgba(13, 17, 28, 0.4);
+  border-top: 1px solid v.$glass-border;
+  backdrop-filter: blur(12px);
+}
+
+.form {
+  max-width: v.$max-width;
+  margin: 0 auto;
+  display: flex;
+  gap: 12px;
+  align-items: flex-end;
+  position: relative;
+}
+
+.input {
+  flex: 1;
+  resize: none;
+  min-height: 48px;
+  max-height: 140px;
+  overflow-y: auto;
+  border-radius: v.$radius-md;
+  border: 1px solid v.$glass-border;
+  padding: 13px 18px;
+  font-size: v.$font-sm;
+  line-height: 1.5;
+  color: v.$white;
+  background: rgba(255, 255, 255, 0.03);
+  outline: none;
+  transition: all v.$transition;
+  // auto-resize by content height (modern browsers)
+  field-sizing: content;
+
+  &::placeholder {
+    color: v.$slate-500;
+  }
+
+  &:focus {
+    border-color: v.$accent-violet;
+    background: rgba(255, 255, 255, 0.05);
+    box-shadow: 0 0 0 3px rgba(139, 92, 246, 0.15), inset 0 1px 2px rgba(0, 0, 0, 0.2);
+  }
+
+  &:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+  }
+}
+
+.sendBtn {
+  flex-shrink: 0;
+  width: 48px;
+  height: 48px;
+  border-radius: v.$radius-md;
+  border: none;
+  background: v.$user-bubble-gradient;
+  color: v.$white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  box-shadow: 0 4px 12px rgba(124, 58, 237, 0.3);
+  transition: all v.$transition;
+
+  svg {
+    transition: transform v.$transition;
+  }
+
+  &:hover:not(:disabled) {
+    box-shadow: 0 6px 20px rgba(124, 58, 237, 0.45);
+    transform: translateY(-2px);
+    
+    svg {
+      transform: translate(2px, -2px) scale(1.05);
+    }
+  }
+
+  &:active:not(:disabled) {
+    transform: translateY(0);
+    box-shadow: 0 2px 8px rgba(124, 58, 237, 0.2);
+  }
+
+  &:disabled {
+    background: rgba(255, 255, 255, 0.04);
+    border: 1px solid v.$glass-border;
+    color: v.$slate-600;
+    cursor: not-allowed;
+    box-shadow: none;
+
+    svg {
+      transform: none;
+    }
+  }
+}
