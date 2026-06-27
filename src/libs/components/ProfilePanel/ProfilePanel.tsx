@@ -1,7 +1,9 @@
 import { useState } from 'react'
+import { translations, type Language } from '@/libs/types/translations'
 import styles from '@/scss/components/ProfilePanel.module.scss'
 
 interface Props {
+  language: Language
   isOpen: boolean
   onClose: () => void
 }
@@ -25,8 +27,9 @@ const SKILL_CATEGORIES = [
   },
 ]
 
-export default function ProfilePanel({ isOpen, onClose }: Props) {
+export default function ProfilePanel({ language, isOpen, onClose }: Props) {
   const [activeTab, setActiveTab] = useState<'about' | 'skills'>('about')
+  const trans = translations[language]
 
   return (
     <aside className={`${styles.sidebar} ${isOpen ? styles.open : ''}`}>
@@ -49,7 +52,7 @@ export default function ProfilePanel({ isOpen, onClose }: Props) {
           <p className={styles.title}>Fullstack & AI Engineer</p>
           <div className={styles.location}>
             <LocationIcon />
-            <span>South Korea (Visa D-10)</span>
+            <span>{trans.locationValue} ({trans.visaValue})</span>
           </div>
         </div>
 
@@ -75,13 +78,13 @@ export default function ProfilePanel({ isOpen, onClose }: Props) {
             className={`${styles.tab} ${activeTab === 'about' ? styles.activeTab : ''}`}
             onClick={() => setActiveTab('about')}
           >
-            About
+            {trans.aboutTab}
           </button>
           <button
             className={`${styles.tab} ${activeTab === 'skills' ? styles.activeTab : ''}`}
             onClick={() => setActiveTab('skills')}
           >
-            Skills
+            {trans.skillsTab}
           </button>
         </div>
 
@@ -90,36 +93,32 @@ export default function ProfilePanel({ isOpen, onClose }: Props) {
           {activeTab === 'about' ? (
             <div className={styles.aboutTab}>
               <div className={styles.section}>
-                <h3>Professional Bio</h3>
-                <p>
-                  Fullstack & AI Engineer with 4+ years of experience building scalable backend architectures and interactive real-time experiences.
-                </p>
-                <p>
-                  Specializes in modern TypeScript web ecosystems (Next.js, NestJS) and designing intelligent Agentic/RAG systems.
-                </p>
+                <h3>{trans.bioTitle}</h3>
+                <p>{trans.bioText1}</p>
+                <p>{trans.bioText2}</p>
               </div>
 
               <div className={styles.section}>
-                <h3>Education</h3>
+                <h3>{trans.eduTitle}</h3>
                 <div className={styles.eduItem}>
                   <div className={styles.eduHeader}>
-                    <h4>Daegu Hanny University</h4>
-                    <span className={styles.eduDate}>2021–2025</span>
+                    <h4>{trans.eduUni}</h4>
+                    <span className={styles.eduDate}>{trans.eduDate}</span>
                   </div>
-                  <p className={styles.eduSub}>Daegu, South Korea</p>
-                  <p className={styles.eduMajor}>Global Tourism & Aviation Service Major</p>
+                  <p className={styles.eduSub}>{trans.eduLocation}</p>
+                  <p className={styles.eduMajor}>{trans.eduMajor}</p>
                 </div>
               </div>
 
               <div className={styles.section}>
-                <h3>Languages</h3>
+                <h3>{trans.langTitle}</h3>
                 <div className={styles.langGrid}>
                   <div className={styles.langItem}>
-                    <span className={styles.langName}>English</span>
+                    <span className={styles.langName}>{trans.langEn}</span>
                     <span className={styles.langBar}><span className={styles.langLevel} style={{ width: '90%' }} /></span>
                   </div>
                   <div className={styles.langItem}>
-                    <span className={styles.langName}>Korean</span>
+                    <span className={styles.langName}>{trans.langKo}</span>
                     <span className={styles.langBar}><span className={styles.langLevel} style={{ width: '80%' }} /></span>
                   </div>
                 </div>

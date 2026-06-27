@@ -1,21 +1,18 @@
+import { translations, type Language } from '@/libs/types/translations'
 import styles from '@/scss/components/SuggestionList.module.scss'
 
-const SUGGESTIONS = [
-  "What are Leo's main skills?",
-  'Tell me about the Nimora project',
-  "What's Leo's work experience?",
-  'How can I contact Leo?',
-] as const
-
 interface Props {
+  language: Language
   onSelect: (text: string) => void
 }
 
-export default function SuggestionList({ onSelect }: Props) {
+export default function SuggestionList({ language, onSelect }: Props) {
+  const list = translations[language].suggestions
+
   return (
     <div className={styles.container}>
       <div className={styles.inner}>
-        {SUGGESTIONS.map((suggestion) => (
+        {list.map((suggestion) => (
           <button
             key={suggestion}
             onClick={() => onSelect(suggestion)}

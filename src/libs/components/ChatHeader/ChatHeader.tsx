@@ -1,10 +1,14 @@
+import { translations, type Language } from '@/libs/types/translations'
 import styles from '@/scss/components/ChatHeader.module.scss'
 
 interface Props {
+  language: Language
   onToggleProfile: () => void
 }
 
-export default function ChatHeader({ onToggleProfile }: Props) {
+export default function ChatHeader({ language, onToggleProfile }: Props) {
+  const trans = translations[language]
+
   return (
     <header className={styles.header}>
       <div className={styles.inner}>
@@ -16,13 +20,13 @@ export default function ChatHeader({ onToggleProfile }: Props) {
         <div className={styles.avatar}>L</div>
 
         <div className={styles.info}>
-          <h1 className={styles.name}>Leo AI Assistant</h1>
-          <p className={styles.sub}>Powered by Gemini + RAG · Ask about Leo</p>
+          <h1 className={styles.name}>{trans.assistantTitle}</h1>
+          <p className={styles.sub}>{trans.assistantSubtitle}</p>
         </div>
 
         <div className={styles.status}>
           <span className={styles.dot} />
-          <span className={styles.statusText}>Active</span>
+          <span className={styles.statusText}>{trans.activeStatus}</span>
         </div>
       </div>
     </header>

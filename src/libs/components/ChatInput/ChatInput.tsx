@@ -2,11 +2,12 @@ import { useState, type FormEvent, type KeyboardEvent } from 'react'
 import styles from '@/scss/components/ChatInput.module.scss'
 
 interface Props {
+  placeholder?: string
   onSend: (text: string) => void
   disabled: boolean
 }
 
-export default function ChatInput({ onSend, disabled }: Props) {
+export default function ChatInput({ placeholder, onSend, disabled }: Props) {
   const [value, setValue] = useState('')
 
   function submit() {
@@ -36,7 +37,7 @@ export default function ChatInput({ onSend, disabled }: Props) {
           value={value}
           onChange={(e) => setValue(e.target.value)}
           onKeyDown={handleKeyDown}
-          placeholder="Ask something about Leo... (Enter to send)"
+          placeholder={placeholder || "Ask something about Leo..."}
           rows={1}
           disabled={disabled}
           className={styles.input}

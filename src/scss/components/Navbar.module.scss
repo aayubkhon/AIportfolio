@@ -1,0 +1,134 @@
+@use '../variables' as v;
+
+.navbar {
+  flex-shrink: 0;
+  height: 56px;
+  background: v.$bg-surface;
+  border-bottom: 1px solid v.$border-subtle;
+  backdrop-filter: blur(20px);
+  z-index: 120;
+}
+
+.inner {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 20px;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.brandGroup {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.sidebarBtn {
+  background: transparent;
+  border: 1px solid transparent;
+  color: v.$text-secondary;
+  cursor: pointer;
+  padding: 7px;
+  border-radius: v.$r-sm;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all v.$dur-normal v.$ease-in-out;
+
+  &:hover {
+    background: v.$bg-surface-hover;
+    border-color: v.$border-subtle;
+    color: v.$text-primary;
+  }
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  user-select: none;
+}
+
+.logoIcon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 30px;
+  height: 30px;
+  border-radius: v.$r-md;
+  background: v.$gradient-brand;
+  color: #fff;
+  font-size: 14px;
+  font-weight: 800;
+  box-shadow: 0 2px 8px rgba(99, 102, 241, 0.3);
+}
+
+.logoText {
+  font-family: 'Outfit', sans-serif;
+  font-size: v.$fs-sm;
+  font-weight: 800;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: v.$text-primary;
+}
+
+.logoDot {
+  color: v.$violet;
+}
+
+.controls {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.languageWrapper {
+  position: relative;
+}
+
+.langSelect {
+  appearance: none;
+  background: v.$bg-surface-elevated;
+  border: 1px solid v.$border-subtle;
+  border-radius: v.$r-md;
+  color: v.$text-primary;
+  font-size: v.$fs-xs;
+  font-weight: 600;
+  padding: 7px 12px;
+  cursor: pointer;
+  outline: none;
+  transition: all v.$dur-normal v.$ease-in-out;
+
+  &:hover, &:focus {
+    border-color: v.$violet;
+    box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.1);
+  }
+
+  option {
+    background: var(--bg-body);
+    color: var(--text-primary);
+  }
+}
+
+.themeToggleBtn {
+  background: v.$bg-surface-elevated;
+  border: 1px solid v.$border-subtle;
+  color: v.$text-secondary;
+  width: 34px;
+  height: 34px;
+  border-radius: v.$r-md;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all v.$dur-normal v.$ease-in-out;
+
+  &:hover {
+    border-color: v.$violet;
+    color: v.$violet;
+    transform: rotate(20deg);
+    box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.1);
+  }
+}

@@ -1,58 +1,90 @@
 @import "tailwindcss";
 @plugin "@tailwindcss/typography";
 
+/* ─── Light Theme: Frosted Dawn ─── */
+:root {
+  --bg-body: #f0f2f5;
+  --bg-surface: rgba(255, 255, 255, 0.72);
+  --bg-surface-elevated: rgba(255, 255, 255, 0.88);
+  --bg-surface-hover: rgba(255, 255, 255, 0.95);
+  --border-subtle: rgba(0, 0, 0, 0.07);
+  --border-focus: rgba(99, 102, 241, 0.5);
+  --shadow-card: 0 1px 3px rgba(0,0,0,0.04), 0 4px 16px rgba(0,0,0,0.03);
+  --shadow-float: 0 8px 30px rgba(0,0,0,0.06);
 
-*,
-*::before,
-*::after {
-  box-sizing: border-box;
+  --text-primary: #0f172a;
+  --text-secondary: #334155;
+  --text-muted: #64748b;
+  --bot-bubble-bg: rgba(255,255,255,0.65);
+  --bot-bubble-text: #1e293b;
+  --input-bg: rgba(255, 255, 255, 0.8);
+
+  --scrollbar-thumb: rgba(0, 0, 0, 0.1);
+  --scrollbar-thumb-hover: rgba(0, 0, 0, 0.18);
+  --glow-color-1: rgba(139, 92, 246, 0.08);
+  --glow-color-2: rgba(6, 182, 212, 0.06);
 }
 
-html,
-body,
-#__next {
+/* ─── Dark Theme: Obsidian Nebula ─── */
+:root[data-theme='dark'] {
+  --bg-body: #07080e;
+  --bg-surface: rgba(15, 18, 30, 0.72);
+  --bg-surface-elevated: rgba(22, 27, 45, 0.85);
+  --bg-surface-hover: rgba(30, 36, 58, 0.9);
+  --border-subtle: rgba(255, 255, 255, 0.06);
+  --border-focus: rgba(139, 92, 246, 0.55);
+  --shadow-card: 0 2px 6px rgba(0,0,0,0.25), 0 8px 24px rgba(0,0,0,0.2);
+  --shadow-float: 0 12px 40px rgba(0,0,0,0.4);
+
+  --text-primary: #f1f5f9;
+  --text-secondary: #94a3b8;
+  --text-muted: #64748b;
+  --bot-bubble-bg: rgba(255,255,255,0.035);
+  --bot-bubble-text: #e2e8f0;
+  --input-bg: rgba(255, 255, 255, 0.04);
+
+  --scrollbar-thumb: rgba(255, 255, 255, 0.07);
+  --scrollbar-thumb-hover: rgba(255, 255, 255, 0.16);
+  --glow-color-1: rgba(139, 92, 246, 0.12);
+  --glow-color-2: rgba(6, 182, 212, 0.08);
+}
+
+*, *::before, *::after { box-sizing: border-box; }
+
+html, body, #__next {
   height: 100%;
   margin: 0;
   padding: 0;
-  background-color: #030509;
-  color: #f1f5f9;
+  background: var(--bg-body);
+  color: var(--text-secondary);
   overflow: hidden;
 }
 
 body {
-  font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+  font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  line-height: 1.6;
 }
 
 h1, h2, h3, h4, h5, h6 {
-  font-family: 'Outfit', -apple-system, BlinkMacSystemFont, sans-serif;
-  font-weight: 600;
-  letter-spacing: -0.02em;
+  font-family: 'Outfit', -apple-system, sans-serif;
+  font-weight: 700;
+  letter-spacing: -0.025em;
+  color: var(--text-primary);
 }
 
-/* Modern Selection Highlight */
 ::selection {
-  background: rgba(139, 92, 246, 0.3);
-  color: #ffffff;
+  background: rgba(99, 102, 241, 0.25);
+  color: #fff;
 }
 
-/* Scrollbar Styling to match Glass aesthetic */
-::-webkit-scrollbar {
-  width: 6px;
-  height: 6px;
-}
-
-::-webkit-scrollbar-track {
-  background: transparent;
-}
-
+::-webkit-scrollbar { width: 5px; height: 5px; }
+::-webkit-scrollbar-track { background: transparent; }
 ::-webkit-scrollbar-thumb {
-  background: rgba(255, 255, 255, 0.08);
+  background: var(--scrollbar-thumb);
   border-radius: 9999px;
-  transition: background 0.2s ease;
 }
-
 ::-webkit-scrollbar-thumb:hover {
-  background: rgba(255, 255, 255, 0.2);
+  background: var(--scrollbar-thumb-hover);
 }
