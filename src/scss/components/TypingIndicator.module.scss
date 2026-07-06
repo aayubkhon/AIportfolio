@@ -1,61 +1,56 @@
 @use '../variables' as v;
 
 @keyframes bounce {
-  0%, 100% { transform: translateY(0);   opacity: 0.4; }
-  50%       { transform: translateY(-5px); opacity: 1;   }
+  0%, 100% { transform: translateY(0);   opacity: 0.35; }
+  50%      { transform: translateY(-4px); opacity: 1;   }
 }
 
 .wrapper {
   display: flex;
-  gap: 12px;
+  gap: 10px;
   align-items: flex-end;
 }
 
 .avatar {
   flex-shrink: 0;
-  width: 32px;
-  height: 32px;
-  border-radius: v.$radius-full;
-  background: v.$avatar-gradient;
+  width: 30px;
+  height: 30px;
+  border-radius: v.$r-full;
+  background: v.$gradient-avatar;
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: v.$font-xs;
+  font-size: v.$fs-2xs;
   font-weight: 700;
-  color: v.$white;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-  border: 1px solid rgba(255, 255, 255, 0.15);
+  color: #fff;
 }
 
 .bubble {
   display: flex;
   align-items: center;
-  gap: 6px;
-  background: rgba(255, 255, 255, 0.03);
-  border: 1px solid v.$glass-border;
-  border-radius: v.$radius-xl;
-  border-bottom-left-radius: v.$radius-xs;
-  padding: 14px 20px;
-  box-shadow: v.$glass-shadow;
-  backdrop-filter: blur(8px);
+  gap: 5px;
+  background: v.$bot-bubble-bg;
+  border: 1px solid v.$border-subtle;
+  border-radius: v.$r-xl;
+  border-bottom-left-radius: v.$r-xs;
+  padding: 13px 18px;
+  box-shadow: v.$shadow-card;
+  backdrop-filter: blur(10px);
 }
 
 .dot {
-  width: 6px;
-  height: 6px;
-  border-radius: v.$radius-full;
-  background: v.$accent-cyan;
-  box-shadow: 0 0 4px v.$accent-cyan;
-  animation: bounce 1.2s ease-in-out infinite;
+  width: 5px;
+  height: 5px;
+  border-radius: v.$r-full;
+  background: v.$indigo;
+  animation: bounce 1.4s ease-in-out infinite;
 
-  &:nth-child(2) { 
-    animation-delay: 0.18s; 
-    background: v.$accent-blue;
-    box-shadow: 0 0 4px v.$accent-blue;
+  &:nth-child(2) {
+    animation-delay: 0.2s;
+    background: v.$violet;
   }
-  &:nth-child(3) { 
-    animation-delay: 0.36s; 
-    background: v.$accent-violet;
-    box-shadow: 0 0 4px v.$accent-violet;
+  &:nth-child(3) {
+    animation-delay: 0.4s;
+    background: v.$cyan;
   }
 }
