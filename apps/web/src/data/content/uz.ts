@@ -132,7 +132,7 @@ export const uz: LocalizedStrings = {
     hintPrefix: 'Masalan:',
   },
   contact: {
-    eyebrow: '06 · Aloqa',
+    eyebrow: '05 · Aloqa',
     title: 'Keling, birga nimadir quraylik',
     lead: "Vakansiya, loyiha yoki oddiy savolmi? Menga eng tez yo'l — email; odatda bir kun ichida javob beraman.",
     footerBuilt: "Next.js · RAG · va ko'p qahva bilan qurilgan",

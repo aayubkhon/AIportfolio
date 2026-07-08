@@ -132,7 +132,7 @@ export const ko: LocalizedStrings = {
     hintPrefix: '예시:',
   },
   contact: {
-    eyebrow: '06 · 연락처',
+    eyebrow: '05 · 연락처',
     title: '함께 만들어요',
     lead: '채용, 프로젝트, 아니면 간단한 질문이라도 좋습니다. 가장 빠른 방법은 이메일이며 보통 하루 안에 답장합니다.',
     footerBuilt: 'Next.js · RAG · 그리고 많은 커피로 제작',

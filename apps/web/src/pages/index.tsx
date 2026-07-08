@@ -123,6 +123,18 @@ export default function PortfolioScreen() {
           </div>
         </Section>
 
+        <Section id="assistant" className={styles.section} ariaLabel="AI assistant">
+          <div className={styles.container}>
+            <Assistant
+              language={language}
+              messages={messages}
+              loading={loading}
+              onSend={handleSend}
+              t={data.sections.assistant}
+            />
+          </div>
+        </Section>
+
         <Section id="about" className={styles.section} ariaLabel="About">
           <div className={styles.container}>
             <About stats={data.stats} t={data.sections.about} />
@@ -144,18 +156,6 @@ export default function PortfolioScreen() {
         <Section id="journey" className={styles.section} ariaLabel="Experience">
           <div className={styles.container}>
             <Journey experience={data.experience} t={data.sections.journey} />
-          </div>
-        </Section>
-
-        <Section id="assistant" className={styles.section} ariaLabel="AI assistant">
-          <div className={styles.container}>
-            <Assistant
-              language={language}
-              messages={messages}
-              loading={loading}
-              onSend={handleSend}
-              t={data.sections.assistant}
-            />
           </div>
         </Section>
 

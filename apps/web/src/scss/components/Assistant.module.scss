@@ -1,66 +1,48 @@
 @use '../variables' as v;
 @use '../mixins' as m;
 
-.layout {
-  display: grid;
-  grid-template-columns: 0.8fr 1.2fr;
-  gap: clamp(1.5rem, 4vw, 3rem);
-  align-items: stretch;
+// Centred single column — the simple version that lives under the hero.
+.simple {
+  max-width: 760px;
+  margin-inline: auto;
 }
 
-.intro {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  gap: 1.5rem;
+.head {
+  text-align: center;
+  margin-bottom: 1.6rem;
   @include m.reveal-base;
 }
 .in { /* released by Reveal */ }
 
-.points {
-  display: flex;
-  flex-direction: column;
-  gap: 1rem;
-  margin: 0;
-  padding: 0;
-  list-style: none;
+.kicker {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-family: 'Outfit', sans-serif;
+  font-size: clamp(1.4rem, 3.5vw, 2rem);
+  font-weight: 800;
+  letter-spacing: -0.02em;
+  color: v.$text-primary;
 
-  li {
-    display: flex;
-    align-items: flex-start;
-    gap: 0.7rem;
-    font-size: v.$fs-md;
-    color: v.$text-secondary;
-
-    span {
-      color: v.$violet-light;
-      font-size: 0.8rem;
-      margin-top: 0.28rem;
-    }
-  }
+  svg { color: v.$violet-light; }
 }
 
-.hint {
-  margin: 0;
-  padding: 1rem 1.2rem;
-  border-radius: v.$r-lg;
-  font-size: v.$fs-sm;
-  color: v.$text-muted;
-  background: v.$input-bg;
-  border: 1px dashed v.$border-subtle;
-
-  em { color: v.$text-secondary; font-style: italic; }
+.sub {
+  margin: 0.6rem auto 0;
+  max-width: 48ch;
+  font-size: v.$fs-md;
+  color: v.$text-secondary;
 }
 
 /* ── Chat dock ── */
 .dock {
   display: flex;
   flex-direction: column;
-  height: clamp(460px, 62vh, 620px);
+  height: clamp(440px, 58vh, 560px);
   overflow: hidden;
   @include m.glass(v.$r-2xl);
   @include m.reveal-base;
-  transition-delay: 0.1s;
+  transition-delay: 0.08s;
   box-shadow: v.$shadow-float;
 }
 
@@ -115,8 +97,4 @@
   border-radius: 50%;
   background: v.$emerald;
   box-shadow: 0 0 8px v.$emerald;
-}
-
-@media (max-width: 860px) {
-  .layout { grid-template-columns: 1fr; }
 }

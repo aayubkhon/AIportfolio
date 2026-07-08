@@ -132,7 +132,7 @@ export const en: LocalizedStrings = {
     hintPrefix: 'Try:',
   },
   contact: {
-    eyebrow: '06 · Contact',
+    eyebrow: '05 · Contact',
     title: "Let's build something",
     lead: 'Got a role, a project or just a question? The fastest way to reach me is email — I usually reply within a day.',
     footerBuilt: 'Built with Next.js · RAG · a lot of coffee',

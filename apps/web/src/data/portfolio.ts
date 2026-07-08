@@ -49,11 +49,11 @@ export const statValues = ["4+", "60K+", "15+", "3"] as const;
 // Section order for the nav + scroll spy; labels come from the localized strings.
 export const navOrder = [
   "home",
+  "assistant",
   "about",
   "skills",
   "work",
   "journey",
-  "assistant",
   "contact",
 ] as const;
 
