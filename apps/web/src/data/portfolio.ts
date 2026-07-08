@@ -179,7 +179,7 @@ export const socialsBase: BaseSocial[] = [
     handle: "github.com/aayubkhon",
     href: "https://github.com/aayubkhon",
   },
-  { id: "telegram", handle: "@ayub701", href: "https://t.me/ayub701" },
+  { id: "telegram", handle: "@aayub701", href: "https://t.me/aayub701" },
   { id: "kakao", handle: "ayub701", href: "#" },
   { id: "phone", handle: "+82 10 8305 4111", href: "tel:+821083054111" },
 ];

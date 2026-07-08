@@ -14,7 +14,7 @@ Phone: +821083054111
 Email: akramov.ayubkhan@gmail.com
 GitHub: github.com/aayubkhon
 KakaoTalk: ayub701
-Telegram: @ayub701
+Telegram: @aayub701
 Visa: D-10 (job-seeking visa in South Korea)
 Spoken languages: Korean, English, Russian (native Uzbek speaker)`,
   },
@@ -174,7 +174,7 @@ Email: akramov.ayubkhan@gmail.com
 Phone: +821083054111
 GitHub: https://github.com/aayubkhon
 KakaoTalk: ayub701
-Telegram: @ayub701
+Telegram: @aayub701
 Location: South Korea. Currently open to work (D-10 visa). Email is the fastest way to reach him.`,
   },
 ]
