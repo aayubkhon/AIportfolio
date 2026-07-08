@@ -1,30 +1,25 @@
 {
-  "name": "ai-project-dep",
-  "version": "0.1.0",
+  "name": "ayubkhon-portfolio",
+  "version": "1.0.0",
   "private": true,
+  "description": "Ayubkhon Akramov — AI & Fullstack Engineer portfolio, RAG-powered.",
+  "workspaces": [
+    "apps/*",
+    "packages/*"
+  ],
   "scripts": {
-    "dev": "next dev",
-    "build": "next build",
-    "start": "next start",
-    "lint": "eslint"
-  },
-  "dependencies": {
-    "@google/generative-ai": "^0.24.1",
-    "@tailwindcss/typography": "^0.5.20",
-    "next": "16.2.9",
-    "react": "19.2.4",
-    "react-dom": "19.2.4",
-    "react-markdown": "^10.1.0"
+    "dev": "turbo run dev",
+    "build": "turbo run build",
+    "start": "turbo run start",
+    "lint": "turbo run lint",
+    "typecheck": "turbo run typecheck"
   },
   "devDependencies": {
-    "@tailwindcss/postcss": "^4",
-    "@types/node": "^20",
-    "@types/react": "^19",
-    "@types/react-dom": "^19",
-    "eslint": "^9",
-    "eslint-config-next": "16.2.9",
-    "sass": "^1.101.0",
-    "tailwindcss": "^4",
+    "turbo": "^2.3.3",
     "typescript": "^5"
+  },
+  "packageManager": "npm@10.8.2",
+  "engines": {
+    "node": ">=20.9.0"
   }
 }

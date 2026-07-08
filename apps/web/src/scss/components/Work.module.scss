@@ -1,0 +1,24 @@
+@use '../variables' as v;
+@use '../mixins' as m;
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: clamp(1rem, 2.5vw, 1.6rem);
+}
+
+.cell {
+  @include m.reveal-base;
+  display: flex;
+}
+.cellIn { /* released by Reveal */ }
+
+// featured first project stretches the full row
+.wide {
+  grid-column: 1 / -1;
+}
+
+@media (max-width: 860px) {
+  .grid { grid-template-columns: 1fr; }
+  .wide { grid-column: auto; }
+}

@@ -1,0 +1,100 @@
+@use '../variables' as v;
+@use '../mixins' as m;
+
+.timeline {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 1.4rem;
+}
+
+.row {
+  display: grid;
+  grid-template-columns: 28px 1fr;
+  gap: 1.2rem;
+  @include m.reveal-base;
+}
+.rowIn { /* released by Reveal */ }
+
+/* the vertical rail + node */
+.marker {
+  position: relative;
+  display: flex;
+  justify-content: center;
+
+  &::before {
+    content: '';
+    position: absolute;
+    top: 22px;
+    bottom: -1.4rem;
+    width: 1px;
+    background: linear-gradient(v.$border-focus, transparent);
+  }
+}
+
+.row:last-child .marker::before { display: none; }
+
+.dot {
+  position: relative;
+  z-index: 1;
+  width: 14px;
+  height: 14px;
+  margin-top: 12px;
+  border-radius: 50%;
+  background: v.$gradient-avatar;
+  box-shadow: 0 0 0 4px v.$bg-body, 0 0 12px v.$aurora-1;
+}
+
+.card {
+  padding: clamp(1.2rem, 2.5vw, 1.7rem);
+  @include m.glass(v.$r-xl);
+  transition: border-color v.$dur-normal, transform v.$dur-normal;
+
+  &:hover {
+    border-color: v.$border-focus;
+    transform: translateX(3px);
+  }
+}
+
+.top {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 1rem;
+  flex-wrap: wrap;
+
+  h3 {
+    font-size: v.$fs-xl;
+    font-weight: 700;
+  }
+}
+
+.period {
+  font-size: v.$fs-xs;
+  font-weight: 600;
+  color: v.$violet-light;
+  white-space: nowrap;
+}
+
+.company {
+  margin: 0.4rem 0 0.9rem;
+  font-size: v.$fs-sm;
+  font-weight: 600;
+  color: v.$text-secondary;
+}
+.sep { color: v.$text-muted; }
+
+.bullets {
+  margin: 0;
+  padding-left: 1.1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.45rem;
+
+  li {
+    font-size: v.$fs-sm;
+    color: v.$text-secondary;
+
+    &::marker { color: v.$violet-light; }
+  }
+}

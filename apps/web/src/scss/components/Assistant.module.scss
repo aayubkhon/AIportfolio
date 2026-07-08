@@ -1,0 +1,122 @@
+@use '../variables' as v;
+@use '../mixins' as m;
+
+.layout {
+  display: grid;
+  grid-template-columns: 0.8fr 1.2fr;
+  gap: clamp(1.5rem, 4vw, 3rem);
+  align-items: stretch;
+}
+
+.intro {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 1.5rem;
+  @include m.reveal-base;
+}
+.in { /* released by Reveal */ }
+
+.points {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+
+  li {
+    display: flex;
+    align-items: flex-start;
+    gap: 0.7rem;
+    font-size: v.$fs-md;
+    color: v.$text-secondary;
+
+    span {
+      color: v.$violet-light;
+      font-size: 0.8rem;
+      margin-top: 0.28rem;
+    }
+  }
+}
+
+.hint {
+  margin: 0;
+  padding: 1rem 1.2rem;
+  border-radius: v.$r-lg;
+  font-size: v.$fs-sm;
+  color: v.$text-muted;
+  background: v.$input-bg;
+  border: 1px dashed v.$border-subtle;
+
+  em { color: v.$text-secondary; font-style: italic; }
+}
+
+/* ── Chat dock ── */
+.dock {
+  display: flex;
+  flex-direction: column;
+  height: clamp(460px, 62vh, 620px);
+  overflow: hidden;
+  @include m.glass(v.$r-2xl);
+  @include m.reveal-base;
+  transition-delay: 0.1s;
+  box-shadow: v.$shadow-float;
+}
+
+.dockHead {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+  padding: 1rem 1.2rem;
+  border-bottom: 1px solid v.$border-subtle;
+  background: v.$bg-surface;
+}
+
+.avatar {
+  display: grid;
+  place-items: center;
+  width: 40px;
+  height: 40px;
+  border-radius: v.$r-md;
+  color: #fff;
+  background: v.$gradient-avatar;
+  box-shadow: 0 6px 16px -6px v.$aurora-1;
+}
+
+.dockMeta {
+  display: flex;
+  flex-direction: column;
+  margin-right: auto;
+
+  strong {
+    font-size: v.$fs-sm;
+    font-weight: 700;
+    color: v.$text-primary;
+  }
+  span {
+    font-size: v.$fs-2xs;
+    color: v.$text-muted;
+  }
+}
+
+.status {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-size: v.$fs-2xs;
+  font-weight: 600;
+  color: v.$emerald;
+}
+
+.statusDot {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: v.$emerald;
+  box-shadow: 0 0 8px v.$emerald;
+}
+
+@media (max-width: 860px) {
+  .layout { grid-template-columns: 1fr; }
+}

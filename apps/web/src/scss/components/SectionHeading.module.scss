@@ -1,0 +1,39 @@
+@use '../variables' as v;
+@use '../mixins' as m;
+
+.head {
+  max-width: 60ch;
+  margin-bottom: clamp(2rem, 5vw, 3.5rem);
+  @include m.reveal-base;
+}
+
+.center {
+  margin-inline: auto;
+  text-align: center;
+}
+
+.headIn { /* released by Reveal */ }
+
+.eyebrow {
+  @include m.eyebrow;
+
+  &::before {
+    content: '';
+    width: 22px;
+    height: 1px;
+    background: v.$violet-light;
+  }
+}
+
+.title {
+  margin: 0.8rem 0 0;
+  font-size: clamp(1.9rem, 4.5vw, 2.9rem);
+  font-weight: 800;
+  letter-spacing: -0.03em;
+}
+
+.subtitle {
+  margin: 0.9rem 0 0;
+  font-size: v.$fs-lg;
+  color: v.$text-secondary;
+}

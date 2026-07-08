@@ -1,0 +1,22 @@
+@use '../variables' as v;
+@use '../mixins' as m;
+
+.page {
+  position: relative;
+  width: 100%;
+}
+
+.container {
+  @include m.container;
+}
+
+// The hero owns its own vertical rhythm (full-height), so no extra padding.
+.hero {
+  display: block;
+}
+
+.section {
+  display: block;
+  padding-block: v.$section-y;
+  scroll-margin-top: v.$nav-h;
+}

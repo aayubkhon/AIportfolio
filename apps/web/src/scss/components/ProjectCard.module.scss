@@ -1,0 +1,172 @@
+@use '../variables' as v;
+@use '../mixins' as m;
+
+.card {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  overflow: hidden;
+  @include m.glass(v.$r-2xl);
+  transition: transform v.$dur-normal v.$ease-out, border-color v.$dur-normal, box-shadow v.$dur-normal;
+
+  &:hover {
+    transform: translateY(-4px);
+    border-color: v.$border-focus;
+    box-shadow: v.$shadow-float;
+
+    .image { transform: scale(1.04); }
+  }
+}
+
+// featured layout: media beside body on wide screens
+.featured {
+  @media (min-width: 861px) {
+    flex-direction: row;
+
+    .media { width: 52%; aspect-ratio: auto; }
+    .body { width: 48%; justify-content: center; }
+  }
+}
+
+.media {
+  position: relative;
+  aspect-ratio: 16 / 10;
+  overflow: hidden;
+  background: v.$bg-surface-elevated;
+}
+
+.image {
+  object-fit: cover;
+  transition: transform v.$dur-slow v.$ease-out;
+}
+
+// the whole thumbnail is a link to the live site
+.mediaLink {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  display: block;
+}
+
+// hover affordance so it's obvious the image opens the site
+.visit {
+  position: absolute;
+  bottom: 0.8rem;
+  right: 0.8rem;
+  z-index: 2;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  padding: 0.4rem 0.75rem;
+  font-size: v.$fs-xs;
+  font-weight: 600;
+  color: v.$text-primary;
+  @include m.glass(v.$r-full);
+  opacity: 0;
+  transform: translateY(6px);
+  transition: opacity v.$dur-normal, transform v.$dur-normal;
+  pointer-events: none;
+}
+
+.card:hover .visit,
+.mediaLink:focus-visible .visit {
+  opacity: 1;
+  transform: none;
+}
+
+.year {
+  position: absolute;
+  top: 0.8rem;
+  left: 0.8rem;
+  z-index: 2;
+  padding: 0.25rem 0.6rem;
+  border-radius: v.$r-full;
+  font-size: v.$fs-2xs;
+  font-weight: 600;
+  color: v.$text-primary;
+  @include m.glass(v.$r-full);
+  pointer-events: none;
+}
+
+.body {
+  display: flex;
+  flex-direction: column;
+  gap: 0.7rem;
+  padding: clamp(1.2rem, 2.5vw, 1.7rem);
+}
+
+.titleRow {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+
+  h3 {
+    font-size: v.$fs-2xl;
+    font-weight: 700;
+  }
+}
+
+.titleLink {
+  color: inherit;
+  text-decoration: none;
+  transition: color v.$dur-fast;
+
+  &:hover { color: v.$violet-light; }
+}
+
+.links {
+  display: flex;
+  gap: 0.4rem;
+
+  a {
+    display: grid;
+    place-items: center;
+    width: 34px;
+    height: 34px;
+    border-radius: 50%;
+    color: v.$text-secondary;
+    border: 1px solid v.$border-subtle;
+    background: v.$input-bg;
+    transition: color v.$dur-fast, border-color v.$dur-fast, transform v.$dur-fast;
+
+    &:hover {
+      color: v.$text-primary;
+      border-color: v.$border-focus;
+      transform: translateY(-1px);
+    }
+  }
+}
+
+.tagline {
+  margin: 0;
+  font-size: v.$fs-sm;
+  font-weight: 600;
+  color: v.$violet-light;
+}
+
+.desc {
+  margin: 0;
+  font-size: v.$fs-sm;
+  color: v.$text-secondary;
+}
+
+.stack {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+  margin: 0.4rem 0 0;
+  padding: 0;
+  list-style: none;
+
+  li {
+    padding: 0.3rem 0.65rem;
+    border-radius: v.$r-sm;
+    font-size: v.$fs-2xs;
+    font-weight: 600;
+    letter-spacing: 0.02em;
+    color: v.$text-muted;
+    background: v.$input-bg;
+    border: 1px solid v.$border-subtle;
+  }
+}

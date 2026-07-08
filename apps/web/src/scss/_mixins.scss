@@ -1,0 +1,46 @@
+@use 'variables' as v;
+
+// The frosted-glass treatment reused by cards, the nav and the chat dock.
+@mixin glass($radius: v.$r-lg) {
+  background: v.$bg-surface;
+  backdrop-filter: blur(22px) saturate(150%);
+  -webkit-backdrop-filter: blur(22px) saturate(150%);
+  border: 1px solid v.$border-subtle;
+  border-radius: $radius;
+  box-shadow: v.$shadow-card;
+}
+
+// Centred page column with responsive side gutters.
+@mixin container {
+  width: 100%;
+  max-width: v.$page-max-w;
+  margin-inline: auto;
+  padding-inline: v.$gutter;
+}
+
+// Small uppercase label that tags each section.
+@mixin eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: v.$fs-xs;
+  font-weight: 600;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: v.$violet-light;
+}
+
+// Starting state for scroll-reveal elements. The global `is-visible` class
+// (added by the Reveal component once it scrolls into view) releases it.
+@mixin reveal-base {
+  opacity: 0;
+  transform: translateY(24px);
+  transition:
+    opacity 0.7s v.$ease-out,
+    transform 0.7s v.$ease-out;
+
+  &:global(.is-visible) {
+    opacity: 1;
+    transform: none;
+  }
+}
