@@ -36,3 +36,17 @@
 
   &:active { transform: translateY(-0.5px); }
 }
+
+@media (max-width: 620px) {
+  .container {
+    padding: 0 14px 10px;
+  }
+
+  .inner {
+    gap: 6px;
+  }
+
+  .chip {
+    padding: 7px 12px;
+  }
+}

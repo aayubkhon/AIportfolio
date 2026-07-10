@@ -2,6 +2,7 @@
 
 .container {
   flex: 1;
+  min-height: 0; // let the panel shrink inside the flex dock so it can scroll
   overflow-y: auto;
 }
 
@@ -13,5 +14,11 @@
   flex-direction: column;
   gap: 14px;
 }
-// Force HMR recompile
+
+@media (max-width: 620px) {
+  .inner {
+    padding: 14px 14px;
+    gap: 10px;
+  }
+}
 

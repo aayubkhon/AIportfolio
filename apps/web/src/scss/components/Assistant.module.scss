@@ -98,3 +98,27 @@
   background: v.$emerald;
   box-shadow: 0 0 8px v.$emerald;
 }
+
+/* ── Mobile ── */
+// On phones the fixed vh height crushed the message area (only ~2 lines showed
+// and the welcome bubble got clipped). Give the dock a taller dvh-based height
+// and tighten the surrounding chrome so the conversation has room to breathe.
+@media (max-width: 620px) {
+  .head {
+    margin-bottom: 1.1rem;
+  }
+
+  .dock {
+    height: clamp(460px, 74dvh, 640px);
+  }
+
+  .dockHead {
+    padding: 0.8rem 1rem;
+    gap: 0.6rem;
+  }
+
+  .avatar {
+    width: 36px;
+    height: 36px;
+  }
+}

@@ -81,3 +81,14 @@
     opacity: 0.5;
   }
 }
+
+@media (max-width: 620px) {
+  .footer {
+    padding: 12px 14px 16px;
+  }
+
+  // The long two-line placeholder was clipped inside the 46px box on phones.
+  .input {
+    min-height: 64px;
+  }
+}
