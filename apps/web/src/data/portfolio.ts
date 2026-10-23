@@ -44,7 +44,7 @@ export const baseProfile: BaseProfile = {
   photo: "/images/portrait.jpg",
 };
 
-export const statValues = ["4+", "60K+", "15+", "3"] as const;
+export const statValues = ["5+", "60K+", "15+", "4"] as const;
 
 // Section order for the nav + scroll spy; labels come from the localized strings.
 export const navOrder = [
@@ -162,10 +162,12 @@ export const projectsBase: BaseProject[] = [
 ];
 
 export const experienceBase: BaseExperience[] = [
-  { id: "arowwai", company: "Arowwai Industries", period: "2023 — 2025" },
-  { id: "technest", company: "TechNest Digital", period: "2022 — 2023" },
-  { id: "pixelcraft", company: "PixelCraft Studios", period: "2021 — 2022" },
-  { id: "daegu", company: "Daegu Haany University", period: "2021 — 2025" },
+  { id: "finsight", company: "FinSight", period: "2026" },
+  { id: "smartfactory", company: "Smart Factory Ops", period: "2025 — 2026" },
+  { id: "nomad", company: "Nomad Industries", period: "2023 — 2024" },
+  { id: "abh", company: "ABH Digital", period: "2020 — 2022" },
+  // resume lists no study dates
+  { id: "haany", company: "Haany University", period: "" },
 ];
 
 export const socialsBase: BaseSocial[] = [

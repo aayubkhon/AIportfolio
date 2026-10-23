@@ -27,7 +27,7 @@ export const ko: LocalizedStrings = {
     title: '엔지니어, 그리고 제너럴리스트',
     subtitle: '데이터베이스 스키마부터 배포되는 화면까지, 기능 하나를 끝까지 책임지고 만드는 걸 좋아합니다.',
     bio: [
-      'AI 엔지니어이자 풀스택 개발자로 4년 넘게 설계부터 배포·운영까지 프로덕션 레벨 애플리케이션을 직접 맡아 왔습니다. 주로 LLM 연동(Claude, OpenAI, Gemini), RAG, 에이전틱 AI 파이프라인을 다루며 Python, TypeScript, NestJS, FastAPI, Next.js를 주력으로 사용합니다.',
+      'AI 엔지니어이자 풀스택 개발자로 5년 넘게 설계부터 배포·운영까지 프로덕션 레벨 애플리케이션을 직접 맡아 왔습니다. 주로 LLM 연동(Claude, OpenAI, Gemini), RAG, 에이전틱 AI 파이프라인을 다루며 Python, TypeScript, NestJS, FastAPI, Next.js를 주력으로 사용합니다.',
       '프롬프트 엔지니어링과 멀티스테이지 LLM 파이프라인부터 백엔드, 프론트엔드, 배포 서버까지 AI 제품을 처음부터 끝까지 혼자 만듭니다. 최근에는 실제 서비스 중인 AI 광고 크리에이티브 SaaS(TypeScript 6만 줄 이상)를 혼자 개발했고, Python/FastAPI로 멀티테넌트 에이전틱 RAG 챗봇도 만들었습니다.',
     ],
   },
@@ -79,43 +79,51 @@ export const ko: LocalizedStrings = {
     title: '지나온 길',
     subtitle: '경력과 학력을 최신순으로.',
     items: {
-      arowwai: {
-        role: '풀스택 개발자 & AI 엔지니어',
-        location: '네덜란드 · 원격',
+      finsight: {
+        role: "풀스택 개발자 & AI 엔지니어",
+        location: "FinSight · 결정론적 AI 에이전트",
         bullets: [
-          'GraphQL / REST로 유지보수 가능한 데이터 레이어를 갖춘 확장 가능한 NestJS 모노레포 백엔드를 구축했습니다.',
-          'Next.js + Tailwind 반응형 앱을 개발하고 React Query·Apollo Client로 상태 관리를 최적화했습니다.',
-          'Socket.IO 기반 실시간 양방향 통신을 구현했습니다.',
-          'Docker·NGINX·PM2로 Linux 배포·운영을 담당해 높은 가용성을 확보했습니다.',
-          'LLM 및 AI API를 통합해 지능형 자동화 기능을 구현했습니다.',
+          "LLM이 산술 계산을 절대 하지 않는 결정론적 방식의 금융급 결제 리스크 분석 AI 에이전트를 설계했습니다.",
+          "정산 지표를 계산하고 LLM이 생성한 [CLAIM: function_name] 태그를 검증하는 Python 워크플로우를 구축했습니다.",
+          "1,468개 배치에서 $305 중복 정산 이상을 탐지하고 LLM 불일치 케이스를 휴먼 인 더 루프 검토 큐로 보냈습니다.",
+          "결정론적 코드 실행과 LLM 리스크 요약 생성의 경계를 설계하고, Claude Code로 빠르게 구현했습니다.",
         ],
       },
-      technest: {
-        role: '프론트엔드 개발자',
-        location: '에스토니아 탈린',
+      smartfactory: {
+        role: "풀스택 개발자 & AI 엔지니어",
+        location: "Smart Factory Ops · 납기 리스크 & 추적성",
         bullets: [
-          'React, TypeScript, SCSS로 반응형 웹 UI를 설계하고 구현했습니다.',
-          'REST 연동과 상태 관리(Redux, Context API)로 데이터 흐름을 최적화했습니다.',
-          '크로스 브라우저 최적화와 재사용 가능한 컴포넌트 구조를 담당했습니다.',
-          'Git 기반 팀 워크플로우에서 코드 리뷰에 적극 참여했습니다.',
+          "정적 UI 목업을 실시간 스마트 팩토리 모니터링 시스템으로 완성했습니다.",
+          "공정 사이클 타임을 집계해 실시간 납기 리스크 레벨을 계산하는 역산 로직을 개발했습니다.",
+          "자재 LOT 테이블의 유닛 ID를 하나의 주문 타임라인에 연결해 자재·검사·시험 전 과정 추적성을 구축했습니다.",
+          "복잡한 드롭다운 상태 버그를 해결해 안정적인 데이터 흐름을 확보하고, Claude Code로 빠르게 프로토타이핑했습니다.",
         ],
       },
-      pixelcraft: {
-        role: '프론트엔드 개발자',
-        location: '우즈베키스탄 타슈켄트',
+      nomad: {
+        role: "풀스택 개발자",
+        location: "Nomad Industries · 대한민국 (프리랜서)",
         bullets: [
-          'HTML, CSS, JavaScript, React로 회사 웹사이트를 구축·유지보수했습니다.',
-          '다양한 기기와 화면 크기에 맞춘 반응형 레이아웃을 구현했습니다.',
-          '디자인 팀과 협업해 커스텀 그래픽, 애니메이션, 트랜지션을 구현했습니다.',
-          '효율적인 배포 프로세스를 관리하고 프로젝트 품질을 검토했습니다.',
+          "Next.js, React, Tailwind CSS, MUI로 반응형·확장 가능한 웹 앱을 구축했습니다.",
+          "React Query, Apollo Client, GraphQL, REST로 상태 관리와 API 연동을 간소화했습니다.",
+          "WebSockets와 Socket.IO로 저지연 실시간 UI 컴포넌트를 개발했습니다.",
+          "LLM API와 AI 기반 인터페이스를 통합해 지능형 자동화 기능을 제공했습니다.",
         ],
       },
-      daegu: {
-        role: '대구한의대학교',
-        location: '대한민국 대구',
+      abh: {
+        role: "프론트엔드 개발자",
+        location: "ABH Digital · 대한민국 (원격)",
         bullets: [
-          '한국에서 공부하며 동시에 소프트웨어 엔지니어로 독학했습니다.',
-          '한국어·영어·러시아어에 능통하며, 우즈베크어가 모국어입니다.',
+          "Next.js, React, Tailwind CSS, MUI로 고성능 반응형 웹 앱을 구축했습니다.",
+          "React Query와 Apollo Client로 REST/GraphQL 데이터 페칭을 최적화했습니다.",
+          "WebSockets와 Socket.IO로 실시간 이벤트 기반 UI를 구현했습니다.",
+          "AI 기반 인터페이스와 프롬프트 워크플로우를 프론트엔드에 통합했습니다.",
+        ],
+      },
+      haany: {
+        role: "한의대학교",
+        location: "대한민국",
+        bullets: [
+          "한국어·영어·러시아어에 능통하며, 우즈베크어가 모국어입니다.",
         ],
       },
     },

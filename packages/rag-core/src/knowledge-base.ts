@@ -10,7 +10,8 @@ export const knowledgeChunks: KnowledgeChunk[] = [
 Full name: Ayubkhon Akramov (known as Leo or 레오, "아유브 LEO")
 Role: AI Engineer & Fullstack Developer
 Location: South Korea
-Phone: +821083054111
+Phone (South Korea): +821083054111
+Phone (Uzbekistan): +998 77 014 56 14
 Email: akramov.ayubkhan@gmail.com
 GitHub: github.com/aayubkhon
 KakaoTalk: ayub701
@@ -22,7 +23,8 @@ Spoken languages: Korean, English, Russian (native Uzbek speaker)`,
     id: 'summary',
     category: 'personal',
     content: `Professional summary:
-Leo (Ayubkhon Akramov) is an AI Engineer & Fullstack Developer with 4+ years of hands-on experience taking production-level applications from design through deployment and operations — often on his own.
+Leo (Ayubkhon Akramov) is a Full-Stack, DevOps & AI Engineer with 5+ years of hands-on experience building scalable web applications and backend systems across South Korean tech startups and international teams.
+Proficient in TypeScript, Node.js, NestJS, Next.js, Python and PHP, with a strong focus on clean architecture, type safety and maintainable codebases. Experienced in deploying high-availability production environments with Docker, NGINX and Linux. Specialised in AI-native features: Claude/OpenAI integration, multi-agent workflows, RAG pipelines and OpenCV-based automation. Uses AI coding workflows (Claude Code, Cursor) to own end-to-end features and ship production-grade code on deadline.
 His main focus is applied AI: LLM integration (Claude, OpenAI, Gemini), Retrieval-Augmented Generation (RAG), and agentic AI pipelines. His primary stack is Python, TypeScript, NestJS, FastAPI and Next.js.
 He works across the whole product: prompt engineering and multi-stage LLM pipelines, backend APIs, frontend integration and deployment. He values clean architecture and maintainable code, and has a strong DevOps background (Docker, NGINX, Linux VPS). He adapts quickly to existing codebases and contributes fast in a team.`,
   },
@@ -37,41 +39,53 @@ He works across the whole product: prompt engineering and multi-stage LLM pipeli
 - Also experienced with OpenCV-based computer vision and NLP for automation solutions.`,
   },
   {
-    id: 'experience-arowwai',
+    id: 'experience-finsight',
     category: 'experience',
-    content: `Work experience — Arowwai Industries (2023–2025):
-Position: Fullstack Developer & AI Engineer
-Company: Arowwai Industries — Solutions Netherlands (Remote)
+    content: `Work experience — FinSight (2026):
+Position: Full Stack Developer & AI Engineer
+Project: FinSight — Deterministic AI Agent for Financial Risk Analysis
 Responsibilities:
-- Built a scalable NestJS monorepo backend with a maintainable GraphQL / REST data layer.
-- Developed responsive web apps with Next.js and Tailwind CSS; optimised state management with React Query and Apollo Client.
-- Implemented real-time bidirectional communication using Socket.IO.
-- Managed Linux server deployment and operations with Docker, NGINX and PM2, ensuring high availability.
-- Integrated LLM and AI APIs for intelligent automation features.`,
+- Architected a finance-grade AI agent system for payment risk analysis using a strictly deterministic approach where LLMs never perform arithmetic calculations.
+- Built automated Python validation workflows that calculate settlement metrics and audit LLM-generated numerical tags [CLAIM: function_name] for absolute accuracy.
+- Detected a $305 duplicate-settlement anomaly across 1,468 batches and flagged LLM discrepancy edge cases to human-in-the-loop review queues.
+- Designed the core boundaries between deterministic code execution and LLM-driven risk summary generation, using Claude Code for rapid implementation.`,
   },
   {
-    id: 'experience-technest',
+    id: 'experience-smartfactory',
     category: 'experience',
-    content: `Work experience — TechNest Digital (2022–2023):
-Position: Frontend Developer
-Company: TechNest Digital — Tallinn, Estonia
+    content: `Work experience — Smart Factory Ops (2025–2026):
+Position: Full Stack Developer & AI Engineer
+Project: Smart Factory Ops — Real-Time Due-Date Risk & Full Traceability System
 Responsibilities:
-- Designed and implemented responsive web application UI with React, TypeScript and SCSS.
-- Optimised data flow and user experience via REST API integration and state management (Redux, Context API).
-- Performed cross-browser compatibility optimisation and designed a reusable component structure.
-- Actively participated in Git-based version control and code review in a team environment.`,
+- Transformed static UI mockups into a fully functional real-time smart factory monitoring system.
+- Engineered due-date reverse calculation logic that aggregates process cycle times to compute delivery risk levels in real time.
+- Built full-lifecycle traceability across materials, inspection and testing by linking unit IDs within material lot tables to a single order timeline.
+- Resolved complex frontend dropdown state-handling bugs to ensure stable client-server data flow and reliability.
+- Used Claude Code to accelerate prototyping and deliver precise, production-ready business logic.`,
   },
   {
-    id: 'experience-pixelcraft',
+    id: 'experience-nomad',
     category: 'experience',
-    content: `Work experience — PixelCraft Studios (2021–2022):
-Position: Frontend Developer
-Company: PixelCraft Studios — Tashkent, Uzbekistan
+    content: `Work experience — Nomad Industries (2023–2024):
+Position: Full Stack Developer
+Company: Nomad Industries — South Korea (Freelance)
 Responsibilities:
-- Built and maintained the company website using HTML, CSS, JavaScript and React.
-- Implemented responsive designs optimised across a range of devices and screen sizes.
-- Collaborated with the design team to implement custom graphics, animations and transitions.
-- Helped manage an efficient deployment process and actively reviewed project quality.`,
+- Built responsive, scalable web applications with Next.js, React, Tailwind CSS and MUI.
+- Streamlined client/server state management and API consumption using React Query, Apollo Client, GraphQL and REST APIs.
+- Developed low-latency, real-time UI components using WebSockets and Socket.IO.
+- Integrated LLM APIs and AI-driven interactive interfaces to deliver intelligent automated features.`,
+  },
+  {
+    id: 'experience-abh',
+    category: 'experience',
+    content: `Work experience — ABH Digital (2020–2022):
+Position: Front-end Developer
+Company: ABH Digital — South Korea (Remote)
+Responsibilities:
+- Built responsive, high-performance web applications using Next.js, React, Tailwind CSS and MUI for South Korean digital products.
+- Optimised state management and data fetching with React Query and Apollo Client for REST/GraphQL API integration.
+- Implemented real-time, event-driven UI features using WebSockets and Socket.IO.
+- Integrated AI-powered interfaces and prompt workflows into the frontend.`,
   },
   {
     id: 'skills-ai',
@@ -151,10 +165,8 @@ Tech stack: Python, OpenCV, Haar Cascade Classifier, Computer Vision, real-time 
     id: 'education',
     category: 'education',
     content: `Education:
-University: Daegu Haany University (대구한의대 대학교)
-Department: School of Global Tourism, Aviation Service Major
-Period: 2021–2025
-Based in South Korea on a D-10 job-seeking visa. Self-trained as a software engineer in parallel with his studies.`,
+University: Haany University, South Korea.
+Based in South Korea.`,
   },
   {
     id: 'languages',
@@ -171,7 +183,8 @@ Leo can work and communicate technically across Korean, English and Russian.`,
     category: 'personal',
     content: `How to contact Leo (Ayubkhon Akramov):
 Email: akramov.ayubkhan@gmail.com
-Phone: +821083054111
+Phone (South Korea): +821083054111
+Phone (Uzbekistan): +998 77 014 56 14
 GitHub: https://github.com/aayubkhon
 KakaoTalk: ayub701
 Telegram: @aayub701

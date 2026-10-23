@@ -27,7 +27,7 @@ export const en: LocalizedStrings = {
     title: 'Engineer first, generalist by habit',
     subtitle: 'I like owning a feature end to end — from the database schema to the pixel that ships.',
     bio: [
-      "AI engineer and fullstack developer with 4+ years taking production apps from design through deployment and operations — usually solo. My day-to-day is LLM integration (Claude, OpenAI, Gemini), RAG, and agentic AI pipelines, mostly in Python, TypeScript, NestJS, FastAPI and Next.js.",
+      "AI engineer and fullstack developer with 5+ years taking production apps from design through deployment and operations — usually solo. My day-to-day is LLM integration (Claude, OpenAI, Gemini), RAG, and agentic AI pipelines, mostly in Python, TypeScript, NestJS, FastAPI and Next.js.",
       'I like owning an AI product from prompt engineering and multi-stage LLM pipelines down to the backend, the frontend and the server it runs on. Recently I shipped a live AI ad-creative SaaS (60k+ lines of TypeScript) on my own, and built a multi-tenant agentic RAG chatbot with Python/FastAPI.',
     ],
   },
@@ -79,43 +79,51 @@ export const en: LocalizedStrings = {
     title: "Where I've been",
     subtitle: 'Roles and study, most recent first.',
     items: {
-      arowwai: {
-        role: 'Fullstack Developer & AI Engineer',
-        location: 'Netherlands · Remote',
+      finsight: {
+        role: "Full Stack Developer & AI Engineer",
+        location: "FinSight · Deterministic AI Agent",
         bullets: [
-          'Built a scalable NestJS monorepo backend with a maintainable GraphQL / REST data layer.',
-          'Developed responsive Next.js + Tailwind apps, optimising state with React Query and Apollo Client.',
-          'Implemented real-time bidirectional communication with Socket.IO.',
-          'Owned Linux deployment and operations with Docker, NGINX and PM2 for high availability.',
-          'Integrated LLM and AI APIs to ship intelligent automation features.',
+          "Architected a finance-grade AI agent for payment risk analysis where LLMs never perform arithmetic.",
+          "Built Python validation workflows that compute settlement metrics and audit LLM-generated [CLAIM: function_name] tags.",
+          "Detected a $305 duplicate-settlement anomaly across 1,468 batches and routed LLM discrepancies to human-in-the-loop review.",
+          "Designed the boundary between deterministic code and LLM-written risk summaries, using Claude Code for fast implementation.",
         ],
       },
-      technest: {
-        role: 'Frontend Developer',
-        location: 'Tallinn, Estonia',
+      smartfactory: {
+        role: "Full Stack Developer & AI Engineer",
+        location: "Smart Factory Ops · Due-Date Risk & Traceability",
         bullets: [
-          'Designed and built responsive web UI with React, TypeScript and SCSS.',
-          'Optimised data flow via REST integration and state management (Redux, Context API).',
-          'Handled cross-browser optimisation and a reusable component architecture.',
-          'Worked in a Git-based team workflow with active code review.',
+          "Turned static UI mockups into a fully functional real-time smart-factory monitoring system.",
+          "Engineered due-date reverse calculation that aggregates process cycle times into real-time delivery risk levels.",
+          "Built full-lifecycle traceability across materials, inspection and testing by linking unit IDs to a single order timeline.",
+          "Fixed complex dropdown state bugs for a stable client-server data flow; prototyped fast with Claude Code.",
         ],
       },
-      pixelcraft: {
-        role: 'Frontend Developer',
-        location: 'Tashkent, Uzbekistan',
+      nomad: {
+        role: "Full Stack Developer",
+        location: "Nomad Industries · South Korea (Freelance)",
         bullets: [
-          'Built and maintained the company website with HTML, CSS, JavaScript and React.',
-          'Implemented responsive layouts optimised across devices and screen sizes.',
-          'Collaborated with the design team on custom graphics, animations and transitions.',
-          'Helped manage an efficient deployment process and reviewed project quality.',
+          "Built responsive, scalable web apps with Next.js, React, Tailwind CSS and MUI.",
+          "Streamlined state management and API consumption with React Query, Apollo Client, GraphQL and REST.",
+          "Developed low-latency real-time UI components with WebSockets and Socket.IO.",
+          "Integrated LLM APIs and AI-driven interfaces to ship intelligent automated features.",
         ],
       },
-      daegu: {
-        role: 'Daegu Haany University',
-        location: 'Daegu, South Korea',
+      abh: {
+        role: "Front-end Developer",
+        location: "ABH Digital · South Korea (Remote)",
         bullets: [
-          'Studied in Korea while self-training as a software engineer in parallel.',
-          'Fluent in Korean, English and Russian; native Uzbek speaker.',
+          "Built responsive, high-performance web apps with Next.js, React, Tailwind CSS and MUI.",
+          "Optimised data fetching with React Query and Apollo Client for REST/GraphQL APIs.",
+          "Implemented real-time, event-driven UI features with WebSockets and Socket.IO.",
+          "Integrated AI-powered interfaces and prompt workflows into the frontend.",
+        ],
+      },
+      haany: {
+        role: "Haany University",
+        location: "South Korea",
+        bullets: [
+          "Fluent in Korean, English and Russian; native Uzbek speaker.",
         ],
       },
     },

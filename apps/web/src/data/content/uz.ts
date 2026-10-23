@@ -27,7 +27,7 @@ export const uz: LocalizedStrings = {
     title: 'Avvalo muhandis, odat bilan universal',
     subtitle: "Bir funksiyani boshidan oxirigacha o'zim olib borishni yoqtiraman — ma'lumotlar bazasi sxemasidan tortib ekranga chiqadigan pikselgacha.",
     bio: [
-      "AI muhandisi va fullstack dasturchi, 4+ yillik tajriba bilan produksiya darajasidagi ilovalarni dizayndan deploy va operatsiyagacha — odatda yakka — olib boraman. Kundalik ishim: LLM integratsiyasi (Claude, OpenAI, Gemini), RAG va agentli AI pipeline'lar, asosan Python, TypeScript, NestJS, FastAPI va Next.js'da.",
+      "AI muhandisi va fullstack dasturchi, 5+ yillik tajriba bilan produksiya darajasidagi ilovalarni dizayndan deploy va operatsiyagacha — odatda yakka — olib boraman. Kundalik ishim: LLM integratsiyasi (Claude, OpenAI, Gemini), RAG va agentli AI pipeline'lar, asosan Python, TypeScript, NestJS, FastAPI va Next.js'da.",
       "AI mahsulotini to'liq o'zim olib borishni yoqtiraman: prompt engineering va ko'p bosqichli LLM pipeline'lardan backend, frontend va u ishlaydigan ser- vergacha. Yaqinda yakka o'zim jonli AI reklama-kreativ SaaS (60k+ qator TypeScript) ishlab chiqdim va Python/FastAPI'da multi-tenant agentli RAG chatbot qurdim.",
     ],
   },
@@ -79,42 +79,50 @@ export const uz: LocalizedStrings = {
     title: "Bosib o'tgan yo'lim",
     subtitle: 'Ish va ta’lim, eng yangisidan boshlab.',
     items: {
-      arowwai: {
-        role: 'Fullstack dasturchi va AI muhandisi',
-        location: 'Niderlandiya · Masofaviy',
+      finsight: {
+        role: "Fullstack dasturchi va AI muhandisi",
+        location: "FinSight · Deterministik AI agent",
         bullets: [
-          "GraphQL / REST bilan qo'llab-quvvatlanadigan ma'lumot qatlamiga ega kengayuvchan NestJS monorepo backend qurdim.",
-          "React Query va Apollo Client bilan holatni optimallashtirib, moslashuvchan Next.js + Tailwind ilovalarini ishlab chiqdim.",
-          "Socket.IO orqali real vaqt ikki tomonlama aloqani amalga oshirdim.",
-          "Docker, NGINX va PM2 bilan Linux deploy va operatsiyani yuqori ishonchlilik uchun boshqardim.",
-          "Aqlli avtomatlashtirish uchun LLM va AI API'larni integratsiya qildim.",
+          "To'lov risklarini tahlil qiluvchi moliyaviy darajadagi AI agentni loyihaladim — LLM hech qachon arifmetik hisob qilmaydi.",
+          "Hisob-kitob ko'rsatkichlarini hisoblaydigan va LLM yaratgan [CLAIM: function_name] teglarini tekshiradigan Python workflow'larini qurdim.",
+          "1 468 ta batch ichida $305 lik takroriy hisob-kitob anomaliyasini topdim va LLM nomuvofiqliklarini human-in-the-loop tekshiruviga yo'naltirdim.",
+          "Deterministik kod va LLM risk xulosalari orasidagi chegarani loyihaladim, Claude Code bilan tez amalga oshirdim.",
         ],
       },
-      technest: {
-        role: 'Frontend dasturchi',
-        location: 'Tallin, Estoniya',
+      smartfactory: {
+        role: "Fullstack dasturchi va AI muhandisi",
+        location: "Smart Factory Ops · Muddat riski va kuzatuvchanlik",
         bullets: [
-          'React, TypeScript va SCSS bilan moslashuvchan veb-UI loyihaladim va qurdim.',
-          "REST integratsiyasi va holat boshqaruvi (Redux, Context API) bilan ma'lumot oqimini optimallashtirdim.",
-          "Cross-brauzer optimallashtirish va qayta ishlatiladigan komponent arxitekturasi bilan shug'ullandim.",
-          'Git asosidagi jamoaviy jarayonda faol kod-review qildim.',
+          "Statik UI maketlarni to'liq ishlaydigan real vaqt smart-zavod monitoring tizimiga aylantirdim.",
+          "Jarayon sikl vaqtlarini jamlab, real vaqtda yetkazib berish risk darajasini hisoblaydigan teskari hisoblash mantiqini yaratdim.",
+          "Unit ID'larni yagona buyurtma timeline'iga bog'lab, material, inspeksiya va test bo'yicha to'liq kuzatuvchanlikni qurdim.",
+          "Murakkab dropdown holat xatolarini tuzatdim; Claude Code bilan tez prototiplashtirdim.",
         ],
       },
-      pixelcraft: {
-        role: 'Frontend dasturchi',
-        location: 'Toshkent, O‘zbekiston',
+      nomad: {
+        role: "Fullstack dasturchi",
+        location: "Nomad Industries · Janubiy Koreya (Freelance)",
         bullets: [
-          'HTML, CSS, JavaScript va React bilan kompaniya saytini qurdim va qo‘llab-quvvatladim.',
-          "Turli qurilma va ekran o'lchamlariga moslashgan responsive maketlarni amalga oshirdim.",
-          'Dizayn jamoasi bilan maxsus grafika, animatsiya va o‘tishlarni yaratdim.',
-          'Samarali deploy jarayonini boshqarishga yordam berdim va loyiha sifatini tekshirdim.',
+          "Next.js, React, Tailwind CSS va MUI bilan moslashuvchan, kengayuvchan veb-ilovalar qurdim.",
+          "React Query, Apollo Client, GraphQL va REST bilan holat boshqaruvi va API ishlatishni soddalashtirdim.",
+          "WebSockets va Socket.IO bilan past kechikishli real vaqt UI komponentlarini ishlab chiqdim.",
+          "Aqlli avtomatlashtirilgan funksiyalar uchun LLM API va AI interfeyslarini integratsiya qildim.",
         ],
       },
-      daegu: {
-        role: 'Daegu Haany universiteti',
-        location: 'Daegu, Janubiy Koreya',
+      abh: {
+        role: "Frontend dasturchi",
+        location: "ABH Digital · Janubiy Koreya (Masofaviy)",
         bullets: [
-          "Koreyada o'qib, parallel ravishda dasturiy muhandis sifatida mustaqil o'rgandim.",
+          "Next.js, React, Tailwind CSS va MUI bilan yuqori unumli moslashuvchan veb-ilovalar qurdim.",
+          "React Query va Apollo Client bilan REST/GraphQL ma'lumot olishni optimallashtirdim.",
+          "WebSockets va Socket.IO bilan real vaqt, event-driven UI funksiyalarini amalga oshirdim.",
+          "AI interfeyslari va prompt workflow'larini frontendga integratsiya qildim.",
+        ],
+      },
+      haany: {
+        role: "Haany universiteti",
+        location: "Janubiy Koreya",
+        bullets: [
           "Koreys, ingliz va rus tillarini yaxshi bilaman; o'zbek tili — ona tilim.",
         ],
       },
