@@ -62,10 +62,10 @@ export const uz: LocalizedStrings = {
         description:
           "Balans, daromad/xarajat tarixi, byudjet va xarajat hisobotlarini bitta ekranga jamlaydigan moliya paneli. Recharts oylik oqim va kategoriya naqshlarini vizuallashtiradi; NestJS API tranzaksiyalarni avtomatik tasniflaydi va byudjetdan oshib ketishni ogohlantiradi.",
       },
-      bloom: {
-        tagline: "Ko'p tilli go'zallik e-commerce",
+      'smart-ops': {
+        tagline: "Aqlli zavod boshqaruv tizimi",
         description:
-          "O'zbekistondagi go'zallik va kosmetika do'konining vitrinasi: narx/chegirma bo'yicha saralash va kategoriya-brend filtrlari bilan moslashuvchan katalog, promo-banner slayder, istaklar ro'yxati va savat — koreys, rus va ingliz tillarida.",
+          "Zavod nazorat paneli ortidagi ishlab chiqarishni boshqarish tizimi: barcha KPI, liniya holati va grafiklar PostgreSQL'dan real vaqtda hisoblanadi. Muddatni teskari hisoblash xavf ostidagi buyurtmalarni belgilaydi, 2 haftalik material ehtiyoji ombor bilan solishtiriladi, buyurtma raqami orqali esa material partiyasidan tekshiruv va sinovgacha to'liq tarix ko'rinadi.",
       },
       'face-detection': {
         tagline: "Kompyuter ko'rish, jonli veb-kamera",

@@ -62,10 +62,10 @@ export const en: LocalizedStrings = {
         description:
           'A finance dashboard that pulls balance, income/expense history, budgets and spending reports into one view. Recharts visualises monthly flow and category patterns; the NestJS API auto-classifies transactions and flags budget overruns.',
       },
-      bloom: {
-        tagline: 'Multi-language beauty e-commerce',
+      'smart-ops': {
+        tagline: 'Smart-factory operations system',
         description:
-          'The storefront for an Uzbek beauty & cosmetics shop: responsive catalog with price/discount sorting and category-brand filters, promo-banner slider, wishlist and cart — localised across Korean, Russian and English.',
+          'A production-management system behind a factory control-room UI: every KPI, line status and chart is aggregated live from PostgreSQL. Due-date backward calculation flags at-risk orders, a 2-week material demand forecast checks stock, and one order number opens the full unit history from material lots to inspection and test results.',
       },
       'face-detection': {
         tagline: 'Computer vision, live webcam',

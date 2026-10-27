@@ -145,13 +145,12 @@ Leo's contribution: fullstack, from frontend to backend. Built the balance summa
 Tech stack: Next.js, NestJS, TypeScript, Recharts.`,
   },
   {
-    id: 'project-bloom',
+    id: 'project-smart-ops',
     category: 'project',
-    content: `Project: Bloom Beauty — Beauty & Cosmetics E-commerce
-Live URL: bloombeauty.uz
-Description: An Uzbekistan-based online beauty/cosmetics shop offering a catalog, brand filtering, promotion banners, product detail pages, wishlist and cart across categories such as nail, facial care and hair care, with discounts. Multi-language: Korean, Russian and English.
-Leo's contribution (frontend): responsive product catalog and filtering UI (sort by price / discount, category and brand filters), promo-banner slider, wishlist and shopping-cart interfaces.
-Tech stack: React, JavaScript, EJS, HTML, CSS, Axios, Bootstrap, SweetAlert2, Swiper, PixelJS.`,
+    content: `Project: DN Smart Ops — Smart Factory Operations Management System
+Description: A production-management system for an electrical panel factory that connects orders, units, processes, materials, inspections and tests in one data model. The factory control-room UI was originally a static mockup with Math.random() numbers; Leo built the real backend so every KPI, line status, weekly output chart and event feed is aggregated live from PostgreSQL.
+Key features: due-date backward calculation (remaining standard process hours + buffer vs. days to deadline → SAFE / AT_RISK / OVERDUE, with an auto-generated explanation), mocked AI wiring inspection with deterministic results stored in the DB, 2-week material demand forecast against stock that excludes already-consumed materials, and full traceability — one order number shows material lots, processes, inspections and test results as a single timeline.
+Tech stack: NestJS, TypeScript, PostgreSQL, Prisma, Docker, Jest (unit tests for the due-date calculator).`,
   },
   {
     id: 'project-face-detection',

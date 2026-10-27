@@ -145,12 +145,11 @@ export const projectsBase: BaseProject[] = [
     liveUrl: "https://finexa.dev",
   },
   {
-    id: "bloom",
-    name: "Bloom Beauty",
-    stack: ["React", "JavaScript", "Axios", "Swiper"],
-    image: "/images/projects/bloom.jpg",
-    year: "2024",
-    liveUrl: "https://bloombeauty.uz",
+    id: "smart-ops",
+    name: "DN Smart Ops",
+    stack: ["NestJS", "TypeScript", "PostgreSQL", "Prisma", "Docker"],
+    image: "/images/projects/smart-ops.jpg",
+    year: "2026",
   },
   {
     id: "face-detection",
